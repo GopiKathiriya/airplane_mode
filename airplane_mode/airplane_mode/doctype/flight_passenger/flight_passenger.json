@@ -40,8 +40,13 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-09-21 13:26:00.605171",
+ "links": [
+  {
+   "link_doctype": "Airplane Ticket",
+   "link_fieldname": "passenger"
+  }
+ ],
+ "modified": "2023-09-21 15:16:09.085843",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Flight Passenger",
