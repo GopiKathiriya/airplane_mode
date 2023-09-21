@@ -24,7 +24,8 @@
   "duration_of_flight",
   "column_break_0ipni",
   "section_break_twkpp",
-  "add_ons"
+  "add_ons",
+  "amended_from"
  ],
  "fields": [
   {
@@ -49,7 +50,7 @@
    "reqd": 1
   },
   {
-   "fetch_from": "source_airport.code",
+   "fetch_from": "flight.source_airport_code",
    "fieldname": "source_airport_code",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -58,7 +59,7 @@
    "read_only": 1
   },
   {
-   "fetch_from": "destination_airport.code",
+   "fetch_from": "flight.destination_airport_code",
    "fieldname": "destination_airport_code",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -69,7 +70,7 @@
    "fieldname": "flight",
    "fieldtype": "Link",
    "label": "Flight ",
-   "options": "Airplane",
+   "options": "Airplane Flight",
    "reqd": 1
   },
   {
@@ -78,6 +79,7 @@
    "label": "Departure Detail"
   },
   {
+   "fetch_from": "flight.date_of_departure",
    "fieldname": "departure_date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -85,12 +87,14 @@
    "reqd": 1
   },
   {
+   "fetch_from": "flight.time_of_departure",
    "fieldname": "departure_time",
    "fieldtype": "Time",
    "label": "Departure Time",
    "reqd": 1
   },
   {
+   "fetch_from": "flight.duration",
    "fieldname": "duration_of_flight",
    "fieldtype": "Duration",
    "label": "Duration of Flight ",
@@ -132,11 +136,21 @@
   {
    "fieldname": "column_break_0ipni",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Airplane Ticket",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-09-21 14:58:19.078168",
+ "modified": "2023-09-21 18:52:33.390636",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",
