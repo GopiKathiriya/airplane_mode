@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:[flight]-{source_airport}-{destination_airport}-{###}",
+ "autoname": "format:{flight}-{source_airport}-{destination_airport}-{###}",
  "creation": "2023-09-21 12:14:39.281034",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,15 +10,21 @@
  "field_order": [
   "passenger",
   "source_airport",
-  "destination_airport",
   "source_airport_code",
-  "destination_airport_code",
   "flight",
+  "column_break_dmeol",
+  "status",
+  "destination_airport",
+  "destination_airport_code",
+  "total_amount",
+  "flight_price",
   "departure_detail_section",
   "departure_date",
   "departure_time",
   "duration_of_flight",
-  "status"
+  "column_break_0ipni",
+  "section_break_twkpp",
+  "add_ons"
  ],
  "fields": [
   {
@@ -96,11 +102,41 @@
    "label": "Status",
    "options": "\nBooked\nChecked-In\nBoarded",
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_twkpp",
+   "fieldtype": "Section Break",
+   "label": "Child Table"
+  },
+  {
+   "fieldname": "add_ons",
+   "fieldtype": "Table",
+   "label": "Add ons",
+   "options": "Airplane Ticket Add-on Item"
+  },
+  {
+   "fieldname": "flight_price",
+   "fieldtype": "Currency",
+   "label": "Flight Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "column_break_dmeol",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_0ipni",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-21 12:38:18.717443",
+ "modified": "2023-09-21 14:58:19.078168",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",
