@@ -14,12 +14,13 @@
   {
    "fieldname": "description",
    "fieldtype": "Data",
-   "label": "Description"
+   "label": "Description",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-21 14:51:06.930961",
+ "modified": "2023-09-21 17:01:25.203872",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket Add-on Type",
