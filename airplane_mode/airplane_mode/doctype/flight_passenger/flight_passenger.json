@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "autoincrement",
+ "autoname": "Flight Passenger-.##",
  "creation": "2023-09-21 11:32:18.164072",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,6 +9,7 @@
  "field_order": [
   "first_name",
   "last_name",
+  "full_name",
   "date_of_birth"
  ],
  "fields": [
@@ -30,15 +31,21 @@
    "in_list_view": 1,
    "label": "Date Of Birth",
    "reqd": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-21 11:32:18.164072",
+ "modified": "2023-09-21 13:26:00.605171",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Flight Passenger",
- "naming_rule": "Autoincrement",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -56,5 +63,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "full_name"
 }

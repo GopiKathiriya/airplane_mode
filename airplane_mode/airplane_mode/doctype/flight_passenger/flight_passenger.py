@@ -5,4 +5,6 @@
 from frappe.model.document import Document
 
 class FlightPassenger(Document):
-	pass
+ def before_save(self):
+    self.full_name = self.first_name + ' ' +self.last_name
+         
