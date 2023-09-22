@@ -2,7 +2,9 @@
 # For license information, please see license.txt
 
 # import frappe
-from frappe.model.document import Document
+from frappe.website.website_generator import WebsiteGenerator
 
-class AirplaneFlight(Document):
-	pass
+class AirplaneFlight(WebsiteGenerator):
+	def On_submit(self):
+		if self.status == "Scheduled":
+			self.status = "Completed"

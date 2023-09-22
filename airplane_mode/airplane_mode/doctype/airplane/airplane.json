@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:Airplane-{airline}-{##}",
+ "autoname": "format:Airplane-{##}",
  "creation": "2023-09-21 11:27:31.194067",
  "default_view": "List",
  "doctype": "DocType",
@@ -38,7 +38,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-21 12:32:06.255574",
+ "modified": "2023-09-22 12:20:57.850205",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane",
