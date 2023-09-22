@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{flight}-{source_airport}-{destination_airport}-{###}",
+ "autoname": "format:{source_airport}-{destination_airport}-{###}",
  "creation": "2023-09-21 12:14:39.281034",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,15 +9,16 @@
  "engine": "InnoDB",
  "field_order": [
   "passenger",
+  "flight",
+  "flight_price",
+  "seat",
   "source_airport",
   "source_airport_code",
-  "flight",
   "column_break_dmeol",
   "status",
   "destination_airport",
   "destination_airport_code",
   "total_amount",
-  "flight_price",
   "departure_detail_section",
   "departure_date",
   "departure_time",
@@ -36,6 +37,7 @@
    "reqd": 1
   },
   {
+   "fetch_from": "flight.source_airport",
    "fieldname": "source_airport",
    "fieldtype": "Link",
    "label": "Source Airport",
@@ -43,6 +45,7 @@
    "reqd": 1
   },
   {
+   "fetch_from": "flight.destination_airport",
    "fieldname": "destination_airport",
    "fieldtype": "Link",
    "label": "Destination Airport",
@@ -50,7 +53,7 @@
    "reqd": 1
   },
   {
-   "fetch_from": "flight.source_airport_code",
+   "fetch_from": "source_airport.code",
    "fieldname": "source_airport_code",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -59,7 +62,7 @@
    "read_only": 1
   },
   {
-   "fetch_from": "flight.destination_airport_code",
+   "fetch_from": "destination_airport.code",
    "fieldname": "destination_airport_code",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -89,9 +92,8 @@
   {
    "fetch_from": "flight.time_of_departure",
    "fieldname": "departure_time",
-   "fieldtype": "Time",
-   "label": "Departure Time",
-   "reqd": 1
+   "fieldtype": "Data",
+   "label": "Departure Time"
   },
   {
    "fetch_from": "flight.duration",
@@ -127,7 +129,8 @@
   {
    "fieldname": "total_amount",
    "fieldtype": "Currency",
-   "label": "Total Amount"
+   "label": "Total Amount",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_dmeol",
@@ -145,12 +148,17 @@
    "options": "Airplane Ticket",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "seat",
+   "fieldtype": "Data",
+   "label": "Seat"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-21 18:52:33.390636",
+ "modified": "2023-09-22 12:51:12.100483",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",

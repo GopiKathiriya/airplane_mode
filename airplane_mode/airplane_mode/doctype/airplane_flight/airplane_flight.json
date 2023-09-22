@@ -1,7 +1,8 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
- "autoname": "format:{airplane}-{MM}-{YYYY}-{#####}",
+ "autoname": "format:{airplane}-{MM}-{YYYY}-{##}",
  "creation": "2023-09-21 17:55:35.489365",
  "default_view": "List",
  "doctype": "DocType",
@@ -11,14 +12,16 @@
   "airplane",
   "date_of_departure",
   "time_of_departure",
-  "column_break_on0dv",
   "duration",
   "status",
   "amended_from",
+  "column_break_on0dv",
   "source_airport",
   "destination_airport",
   "source_airport_code",
-  "destination_airport_code"
+  "destination_airport_code",
+  "route",
+  "is_published"
  ],
  "fields": [
   {
@@ -46,7 +49,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nScheduled\nCompleted\nCancelled"
+   "options": "Scheduled\nCompleted\nCancelled"
   },
   {
    "fieldname": "amended_from",
@@ -66,7 +69,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": " Source Airport",
-   "options": "Airplane Ticket",
+   "options": "Airport",
    "reqd": 1
   },
   {
@@ -74,26 +77,43 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Destination Airport",
-   "options": "Airplane Ticket",
+   "options": "Airport",
    "reqd": 1
   },
   {
-   "fetch_from": "source_airport.source_airport_code",
+   "fetch_from": "source_airport.code",
    "fieldname": "source_airport_code",
    "fieldtype": "Data",
    "label": "Source Airport Code"
   },
   {
-   "fetch_from": "destination_airport.destination_airport_code",
+   "fetch_from": "destination_airport.code",
    "fieldname": "destination_airport_code",
    "fieldtype": "Data",
    "label": "Destination Airport Code"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2023-09-21 18:49:58.798094",
+ "links": [
+  {
+   "link_doctype": "Airplane Ticket",
+   "link_fieldname": "flight"
+  }
+ ],
+ "modified": "2023-09-22 15:53:02.496232",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Flight",
@@ -113,6 +133,7 @@
    "write": 1
   }
  ],
+ "route": "flight",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
