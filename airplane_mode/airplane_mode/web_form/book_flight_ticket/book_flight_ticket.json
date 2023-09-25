@@ -18,7 +18,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2023-09-22 16:48:04.769913",
+ "modified": "2023-09-22 17:58:34.805757",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "book-flight-ticket",
@@ -29,7 +29,7 @@
  "show_list": 0,
  "show_sidebar": 0,
  "success_title": "Ticket Booked",
- "success_url": "Submit another response",
+ "success_url": "http://airplan.com:8005/demo",
  "title": "Book Flight Ticket",
  "web_form_fields": [
   {

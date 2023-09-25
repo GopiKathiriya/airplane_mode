@@ -1,6 +1,9 @@
 // Copyright (c) 2023, airplane_mode and contributors
 // For license information, please see license.txt
+/* eslint-disable */
 
-frappe.ui.form.on('Airplane Flight', {
-	
-});
+frappe.query_reports["Airplane report"] = {
+	"filters": [
+
+	]
+};
