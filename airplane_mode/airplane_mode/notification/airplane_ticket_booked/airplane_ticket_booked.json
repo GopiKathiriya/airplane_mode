@@ -1,0 +1,27 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "creation": "2023-09-26 17:47:58.501714",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Airplane Ticket",
+ "enabled": 1,
+ "event": "Submit",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Add your message here",
+ "modified": "2023-09-26 17:47:58.501714",
+ "modified_by": "Administrator",
+ "module": "airplane_mode",
+ "name": "Airplane Ticket Booked",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "Fleet Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Airplane Ticket {{doc.name}}"
+}
