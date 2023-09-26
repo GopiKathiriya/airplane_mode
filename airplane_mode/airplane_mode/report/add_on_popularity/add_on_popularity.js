@@ -5,5 +5,7 @@
 frappe.query_reports["add on popularity"] = {
 	"filters": [
 
+		
+
 	]
 };

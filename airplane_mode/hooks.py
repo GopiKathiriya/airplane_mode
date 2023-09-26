@@ -65,6 +65,24 @@ app_license = "MIT"
 
 # before_install = "airplane_mode.install.before_install"
 # after_install = "airplane_mode.install.after_install"
+fixtures = [
+    {
+        "dt": "Custom DocPerm",
+        "filter": [
+            ["role", "in", ["Airport Authority Personnel", "Fleet Manager", "Travel Agent", "Flight Crew Member"]],
+            ["parent", "in", ["Airport", "Airplane", "Airline", "Airplane Flight", "Airplane Ticket", "Airplane Ticket Add-on Type"]]
+        ]
+    },
+    {
+        "dt": "Website Slideshow"
+    },
+    {
+        "dt": "Website Settings"
+    },
+    {
+        "dt": "Web Page"
+    }
+]
 
 # Uninstallation
 # ------------
