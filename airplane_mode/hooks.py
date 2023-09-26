@@ -6,6 +6,7 @@ app_publisher = "airplane_mode"
 app_description = "airplane_mode"
 app_email = "frappe@gmail.com"
 app_license = "MIT"
+app_url_logo = "/assets/airplane_mode/https://i.pinimg.com/736x/d3/9b/39/d39b39a17ae85a106b7a82ed4ad6383e.jpg"
 
 # Includes in <head>
 # ------------------
