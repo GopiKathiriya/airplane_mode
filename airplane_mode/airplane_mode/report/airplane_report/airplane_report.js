@@ -4,17 +4,6 @@
 
 frappe.query_reports["Airplane report"] = {
 	"filters": [
-		{
-			'fieldname': 'airline',
-            'label': 'Airline',
-            'fieldtype': 'Link',
-            'optinos':'airline'
-		},
-		{
-            'fieldname': 'count',
-            'label': 'Count',
-            'fieldtype': 'Int'
-        },
 
 	]
 };
