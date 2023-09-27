@@ -2,7 +2,8 @@
  "attach_print": 0,
  "channel": "System Notification",
  "creation": "2023-09-26 17:47:58.501714",
- "days_in_advance": 0,
+ "date_changed": "departure_date",
+ "days_in_advance": 1,
  "docstatus": 0,
  "doctype": "Notification",
  "document_type": "Airplane Ticket",
@@ -11,7 +12,7 @@
  "idx": 0,
  "is_standard": 1,
  "message": "Add your message here",
- "modified": "2023-09-26 17:47:58.501714",
+ "modified": "2023-09-26 17:56:29.804188",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket Booked",
@@ -23,5 +24,5 @@
  ],
  "send_system_notification": 0,
  "send_to_all_assignees": 0,
- "subject": "Airplane Ticket {{doc.name}}"
+ "subject": "Airplane Ticket{{doc.name}}"
 }
